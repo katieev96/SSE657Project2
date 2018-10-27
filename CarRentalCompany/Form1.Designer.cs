@@ -38,15 +38,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.submit = new System.Windows.Forms.Button();
             this.ageComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.vehicleComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.pickup = new System.Windows.Forms.DateTimePicker();
+            this.dropoff = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.addOnsCheckedBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // firstName
@@ -119,21 +121,22 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(104, 9);
+            this.label5.Location = new System.Drawing.Point(156, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(526, 67);
+            this.label5.Size = new System.Drawing.Size(443, 67);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Car Rental Service";
+            this.label5.Text = "KG Car Rentals";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // submit
             // 
-            this.button1.Location = new System.Drawing.Point(281, 654);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 43);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.submit.Location = new System.Drawing.Point(291, 800);
+            this.submit.Name = "submit";
+            this.submit.Size = new System.Drawing.Size(127, 43);
+            this.submit.TabIndex = 10;
+            this.submit.Text = "Submit";
+            this.submit.UseVisualStyleBackColor = true;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
             // 
             // ageComboBox
             // 
@@ -150,7 +153,7 @@
             "25+"});
             this.ageComboBox.Location = new System.Drawing.Point(399, 552);
             this.ageComboBox.Name = "ageComboBox";
-            this.ageComboBox.Size = new System.Drawing.Size(121, 33);
+            this.ageComboBox.Size = new System.Drawing.Size(300, 33);
             this.ageComboBox.TabIndex = 13;
             // 
             // label6
@@ -172,7 +175,7 @@
             "SUV"});
             this.vehicleComboBox.Location = new System.Drawing.Point(399, 488);
             this.vehicleComboBox.Name = "vehicleComboBox";
-            this.vehicleComboBox.Size = new System.Drawing.Size(121, 33);
+            this.vehicleComboBox.Size = new System.Drawing.Size(300, 33);
             this.vehicleComboBox.TabIndex = 15;
             this.vehicleComboBox.SelectedIndexChanged += new System.EventHandler(this.vehicleComboBox_SelectedIndexChanged);
             // 
@@ -185,19 +188,19 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Vehicle Type:";
             // 
-            // dateTimePicker1
+            // pickup
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(399, 356);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker1.TabIndex = 17;
+            this.pickup.Location = new System.Drawing.Point(399, 356);
+            this.pickup.Name = "pickup";
+            this.pickup.Size = new System.Drawing.Size(300, 31);
+            this.pickup.TabIndex = 17;
             // 
-            // dateTimePicker2
+            // dropoff
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(399, 418);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker2.TabIndex = 18;
+            this.dropoff.Location = new System.Drawing.Point(399, 418);
+            this.dropoff.Name = "dropoff";
+            this.dropoff.Size = new System.Drawing.Size(300, 31);
+            this.dropoff.TabIndex = 18;
             // 
             // label8
             // 
@@ -217,21 +220,47 @@
             this.label9.TabIndex = 20;
             this.label9.Text = "Drop-Off Date:";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(111, 634);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(102, 25);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "Add-Ons:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // addOnsCheckedBox
+            // 
+            this.addOnsCheckedBox.FormattingEnabled = true;
+            this.addOnsCheckedBox.Items.AddRange(new object[] {
+            "Gas Emission Offset - $10/Day",
+            "GPS - $15/Day",
+            "Additional Driver - $13/Day",
+            "Satellite Radio - $8/Day",
+            "Roadside Assistance - $8/Day"});
+            this.addOnsCheckedBox.Location = new System.Drawing.Point(399, 634);
+            this.addOnsCheckedBox.Name = "addOnsCheckedBox";
+            this.addOnsCheckedBox.Size = new System.Drawing.Size(341, 160);
+            this.addOnsCheckedBox.TabIndex = 25;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(774, 829);
+            this.ClientSize = new System.Drawing.Size(764, 979);
+            this.Controls.Add(this.addOnsCheckedBox);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dropoff);
+            this.Controls.Add(this.pickup);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.vehicleComboBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ageComboBox);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.submit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -242,7 +271,7 @@
             this.Controls.Add(this.lastName);
             this.Controls.Add(this.firstName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "KG Rentals";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,15 +289,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button submit;
         private System.Windows.Forms.ComboBox ageComboBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox vehicleComboBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker pickup;
+        private System.Windows.Forms.DateTimePicker dropoff;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckedListBox addOnsCheckedBox;
     }
 }
 
