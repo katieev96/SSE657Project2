@@ -12,9 +12,6 @@ namespace CarRentalCompany
 {
     public partial class Form1 : Form
     {
-        string firstname, lastname, emailaddr, phonenum, age, vehicalType;
-        DateTime pickuptime, dropofftime;
-        bool gasEmis, gps, addDriver, satRadio, roadAssist; 
         public Form1()
         {
             InitializeComponent();
@@ -49,21 +46,38 @@ namespace CarRentalCompany
         private void submit_Click(object sender, EventArgs e)
         {
             hideAllForm();
-            
+            popUp();
         }
 
         public void hideAllForm()
         {
-            firstName.Hide();
-            lastName.Hide();
-            ageComboBox.Hide();
-            email.Hide();
-            phoneNumber.Hide();
-            pickup.Hide();
-            dropoff.Hide();
-            vehicleComboBox.Hide();
-            addOnsCheckedBox.Hide();
-            submit.Hide();
+            firstName.Enabled = false;
+            lastName.Enabled = false;
+            ageComboBox.Enabled = false;
+            email.Enabled = false;
+            phoneNumber.Enabled = false;
+            pickup.Enabled = false;
+            dropoff.Enabled = false;
+            vehicleComboBox.Enabled = false;
+            addOnsCheckedBox.Enabled = false;
+            submit.Enabled = false;
+        }
+
+        public void popUp()
+        {
+            string message = "";
+            message += ("USER INFORMATION" + "\r\n");
+            message += (lastName.Text + ", " + firstName.Text + "\t" + ageComboBox.Text.ToString());
+            message += "\r\n";
+            message += (email.Text + "\t" + phoneNumber.Text);
+            message += ("\r\n" + "\r\n");
+            message += ("RENTAL INFORMATION" + "\r\n");
+            message += (vehicleComboBox.Text + " rental from " + pickup.Text + " to " + dropoff.Text);
+            message += ("\r\n" + "Add-Ons include:" + "\r\n");
+            //Need to loop through add-ons
+            message += ("\t" + addOnsCheckedBox.Text);
+
+            MessageBox.Show(message, "Review Rental Information");
         }
     }
 }
