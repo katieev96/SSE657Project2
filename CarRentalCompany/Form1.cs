@@ -47,6 +47,8 @@ namespace CarRentalCompany
         {
             hideAllForm();
             popUp();
+
+            
         }
 
         public void hideAllForm()
@@ -72,12 +74,33 @@ namespace CarRentalCompany
             message += (email.Text + "\t" + phoneNumber.Text);
             message += ("\r\n" + "\r\n");
             message += ("RENTAL INFORMATION" + "\r\n");
-            message += (vehicleComboBox.Text + " rental from " + pickup.Text + " to " + dropoff.Text);
-            message += ("\r\n" + "Add-Ons include:" + "\r\n");
-            //Need to loop through add-ons
-            message += ("\t" + addOnsCheckedBox.Text);
+            message += (vehicleComboBox.Text + " rental from: " + "\r\n");
+            message += ("\t" + pickup.Text + " to " + dropoff.Text);
+            if (addOnsCheckedBox.SelectedIndex >= 0)
+            {
+                message += ("\r\n" + "Add-Ons include:" + "\r\n");
+
+                var v = addOnsCheckedBox.CheckedItems;
+                for (int i = 0; i < v.Count; i++)
+                {
+                    message += ("\t" + v[i] + "\r\n");
+                }
+            }
+
 
             MessageBox.Show(message, "Review Rental Information");
+        }
+
+        private void Name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void Number_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
