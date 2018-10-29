@@ -81,6 +81,7 @@
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(532, 353);
             this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.phoneNumberTextBox.MaxLength = 10;
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(265, 38);
             this.phoneNumberTextBox.TabIndex = 3;
