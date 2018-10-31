@@ -58,6 +58,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(265, 38);
             this.firstNameTextBox.TabIndex = 0;
+            this.firstNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_KeyPress);
             // 
             // lastNameTextBox
             // 
@@ -66,6 +67,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(265, 38);
             this.lastNameTextBox.TabIndex = 1;
+            this.lastNameTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Name_KeyPress);
             // 
             // emailTextBox
             // 
@@ -79,9 +81,11 @@
             // 
             this.phoneNumberTextBox.Location = new System.Drawing.Point(532, 353);
             this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.phoneNumberTextBox.MaxLength = 10;
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(265, 38);
             this.phoneNumberTextBox.TabIndex = 3;
+            this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Number_KeyPress);
             // 
             // firstNameLabel
             // 
@@ -143,7 +147,7 @@
             this.submitButton.TabIndex = 10;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
-            this.submitButton.Click += new System.EventHandler(this.submit_Click);
+            this.submitButton.Click += new System.EventHandler(this.Submit_Click);
             // 
             // ageComboBox
             // 
@@ -263,6 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1019, 1214);
             this.Controls.Add(this.addOnsCheckedListBox);
@@ -286,6 +291,7 @@
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1050, 1250);
             this.Name = "RentalSubmissionForm";
             this.Text = "KG Rentals";
             this.ResumeLayout(false);
