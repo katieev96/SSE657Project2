@@ -47,7 +47,7 @@
             this.splashScreenTableLayout.Controls.Add(this.button1, 0, 2);
             this.splashScreenTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splashScreenTableLayout.Location = new System.Drawing.Point(0, 0);
-            this.splashScreenTableLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splashScreenTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.splashScreenTableLayout.Name = "splashScreenTableLayout";
             this.splashScreenTableLayout.RowCount = 3;
             this.splashScreenTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -63,7 +63,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(209, 2);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(135, 126);
             this.radioButton2.TabIndex = 1;
@@ -77,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(348, 2);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(117, 126);
             this.radioButton1.TabIndex = 0;
@@ -102,7 +102,7 @@
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.splashScreenTableLayout.SetColumnSpan(this.button1, 2);
             this.button1.Location = new System.Drawing.Point(246, 301);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 48);
             this.button1.TabIndex = 3;
@@ -116,9 +116,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 390);
             this.Controls.Add(this.splashScreenTableLayout);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SplashScreenForm";
-            this.Text = "SplashScreenForm";
+            this.Text = "KG Rentals";
             this.splashScreenTableLayout.ResumeLayout(false);
             this.splashScreenTableLayout.PerformLayout();
             this.ResumeLayout(false);

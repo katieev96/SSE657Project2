@@ -216,7 +216,7 @@
             this.MaximumSize = new System.Drawing.Size(930, 1000);
             this.MinimumSize = new System.Drawing.Size(930, 600);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "KG Rentals";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
