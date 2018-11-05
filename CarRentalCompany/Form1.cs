@@ -66,12 +66,35 @@ namespace CarRentalCompany
 
         private void button4_Click(object sender, EventArgs e)
         {
-            //label4.Visible = true;
+            label4.Visible = true;
+            label4.Text = ("Final Cost is $719.04");
         }
 
         private void infoToText(string text)
         {
+            var s = text.Split(',');
+            string output = string.Empty;
 
+            var firstN = s[0];
+            var lastN = s[1];
+            var eMail = s[2];
+            var phoneN = s[3];
+            var vehicle = s[4];
+            var tripLength = s[5];
+            var addOn1 = s[6];
+            var addOn2 = s[7];
+            var addOn3 = s[8];
+
+            output += (lastN + ", " + firstN + "\r\n");
+            output += (eMail + "\r\n");
+            output += (phoneN + "\r\n");
+            output += (vehicle + " - $60/Day\r\n");
+            output += (tripLength + "\r\n");
+            output += (addOn1 + "\r\n");
+            output += (addOn2 + "\r\n");
+            output += (addOn3 + "\r\n");
+
+            label3.Text = output;
         }
     }
 }
