@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,23 @@ namespace CarRentalCompany
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            //Adds text to a file Customer.txt that will only contain this customers info
+
+            //File.WriteAllText(@"C:\\Project2\\Customer.txt", firstNameTextBox.Text + ", "
+            //    + lastNameTextBox.Text + ", " + emailTextBox.Text + ", "
+            //    + phoneNumberTextBox.Text
+            //    + ";" + Environment.NewLine);
+
+
+            //Adds text to a file that also contains all entries from other customers
+
+            string filename = @"C:\\Project2\\Customer.txt";
+            string addCustomer = firstNameTextBox.Text + ", "
+                + lastNameTextBox.Text + ", "
+                + emailTextBox.Text + ", "
+                + phoneNumberTextBox.Text
+                + ";" + Environment.NewLine;
+            File.AppendAllText(filename, addCustomer);
             hideAllForm();
             popUp();
         }
