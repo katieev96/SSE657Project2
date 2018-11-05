@@ -31,10 +31,21 @@ namespace CarRentalCompany
             //Adds text to a file that also contains all entries from other customers
 
             string filename = @"C:\\Project2\\Customer.txt";
+            string items ="";
+            foreach(string check in addOnsCheckedListBox.CheckedItems)
+            {
+                //items += check.Text;
+                items += ", ";
+            }
             string addCustomer = firstNameTextBox.Text + ", "
                 + lastNameTextBox.Text + ", "
                 + emailTextBox.Text + ", "
-                + phoneNumberTextBox.Text
+                + phoneNumberTextBox.Text + ","
+                + pickupDatePicker.Text + ","
+                + dropoffDatePicker.Text + ","
+                + vehicleComboBox.Text + ","
+                + ageComboBox.Text + ","
+                + items
                 + ";" + Environment.NewLine;
             File.AppendAllText(filename, addCustomer);
             hideAllForm();
