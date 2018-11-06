@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace CarRentalCompany
 {
-    public partial class Form1 : Form
+    public partial class CashierForm : Form
     {
         string file = String.Empty;
-        public Form1()
+        public CashierForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void fileDialogButton_Click(object sender, EventArgs e)
         {
             //Display File
             var fD = new OpenFileDialog();
@@ -27,21 +27,20 @@ namespace CarRentalCompany
             {
                 file = fD.FileName;
 
-                textBox1.Text = file;
-                textBox1.ForeColor = System.Drawing.Color.Black;
-                textBox1.Enabled = true;
+                filePathTextBox.Text = file;
+                filePathTextBox.ForeColor = System.Drawing.Color.Black;
+                filePathTextBox.Enabled = true;
             }
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void resetButton_Click(object sender, EventArgs e)
         {
             //Hide panels when reset
-            tableLayoutPanel2.Visible = false;
-            //label4.Visible = false;
+            userInfoTableLayout.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void uploadButton_CLick(object sender, EventArgs e)
         {
             //Read File Input
             var size = -1;
@@ -51,23 +50,20 @@ namespace CarRentalCompany
                 text = System.IO.File.ReadAllText(file);
                 size = text.Length;
 
-                label3.Text = text;
+                userInfoLabel.Text = text;
 
-                tableLayoutPanel2.Visible = true;
+                userInfoTableLayout.Visible = true;
                 //Display User Info
                 infoToText(text);
 
             }
             catch (Exception ex) { }
-
-            
-
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void calculateButton_Click(object sender, EventArgs e)
         {
-            label4.Visible = true;
-            label4.Text = ("Final Cost is $719.04");
+            priceLabel.Visible = true;
+            priceLabel.Text = ("Final Cost is " + priceLabel.Text);
         }
 
         private void infoToText(string text)
@@ -88,13 +84,13 @@ namespace CarRentalCompany
             output += (lastN + ", " + firstN + "\r\n");
             output += (eMail + "\r\n");
             output += (phoneN + "\r\n");
-            output += (vehicle + " - $60/Day\r\n");
+            output += (vehicle + "\r\n");
             output += (tripLength + "\r\n");
             output += (addOn1 + "\r\n");
             output += (addOn2 + "\r\n");
             output += (addOn3 + "\r\n");
 
-            label3.Text = output;
+            userInfoLabel.Text = output;
         }
     }
 }

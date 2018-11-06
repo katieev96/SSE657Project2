@@ -26,7 +26,7 @@ namespace CarRentalCompany
             }
             else
             {
-                Form1 cashier = new Form1();
+                CashierForm cashier = new CashierForm();
                 cashier.Show();
             }
             //Application.Exit();
