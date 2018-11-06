@@ -30,7 +30,7 @@ namespace CarRentalCompany
 
             //Adds text to a file that also contains all entries from other customers
 
-            string filename = @"C:\\Project2\\Customer.txt";
+            string filename = @"Downloads\\Customer.txt";
             string items ="";
             foreach(string check in addOnsCheckedListBox.CheckedItems)
             {
